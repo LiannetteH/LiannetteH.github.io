@@ -135,7 +135,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-input[type="submit"]:hover, input[type="submit":focus {
+input[type="submit"]:hover, input[type="submit"]:focus {
   background-color: #4b0082;
 }
 /* Responsive design */
@@ -150,7 +150,7 @@ input[type="submit"]:hover, input[type="submit":focus {
 }
 @media screen and (min-width: 768px) { /* Tablet */
   nav ul {
-    flex-direciton: row;
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1024px) { /* Desktop */
