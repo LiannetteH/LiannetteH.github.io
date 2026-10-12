@@ -112,6 +112,20 @@ footer{
 .highlight-col {
   background-color: #f2f2f2;
 }
+/* Project Image Styling */
+.project-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #4c1d95;
+  transition: transform 0.3s ease;
+}
+/* Hover Effect */
+.project-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
