@@ -13,3 +13,4 @@ if (userName !== null && userName.trim() !== "") {
 } else {
   document.getElementById("welcomeMessage").textContent =
     "Welcome to my portfolio!";
+}
