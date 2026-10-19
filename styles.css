@@ -173,3 +173,94 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     margin: 0 auto;
   }
 }
+
+/* Featured Content */
+.featured-box {
+  padding: 20px;
+  margin: 15px 0;
+  background-color: #eadcff;
+  border: 2px solid #4c1d95;
+  border-radius: 10px;
+}
+
+.featured-box[hidden] {
+  display: none;
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+  padding: 15px;
+  background-color: #4c1d95;
+  color: white;
+  text-align: right;
+}
+
+.theme-toggle label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+/* Dark Mode background and text */
+body.dark-mode {
+  background-color: #120c22;
+  color: #f5f0ff;
+}
+
+body.dark-mode main {
+  background-color: #24133b;
+}
+
+body.dark-mode section {
+  background-color: #30204a;
+  color: #f5f0ff;
+}
+
+body.dark-mode .featured-box {
+  background-color: #3b2859;
+  color: #f5f0ff;
+  border-color: #b89aff;
+}
+
+body.dark-mode table,
+body.dark-mode tbody td,
+body.dark-mode tfoot td {
+  color: #f5f0ff;
+}
+
+body.dark-mode th,
+body.dark-mode td {
+  border-color: #a78bfa;
+}
+
+body.dark-mode .highlight-col {
+  background-color: #3b2859;
+}
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode a {
+  color: #e9d5ff;
+}
+
+body.dark-mode header,
+body.dark-mocde nav a {
+  color: white;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #e9d5ff;
+  color: #24133b;
+}
+
+body.dark-mode input[type="submit"] {
+  background-color: #6d28d9;
+  color: white;
+}
+
