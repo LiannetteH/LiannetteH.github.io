@@ -62,6 +62,8 @@ const contactForm = document.getElementById("contactForm");
 submitButton.addEventListener("click", function(event) {
   event.preventDefault();
 
+  const contactForm = submitButton.closest("form");
+
   if (!contactForm.reportValidity()) {
     return;
   }
@@ -73,7 +75,7 @@ submitButton.addEventListener("click", function(event) {
     return;
   }
 
-  alter("Thank you, " + senderName + ", your message has been sent!");
+  alert("Thank you, " + senderName + ", your message has been sent!");
 });
 
 
