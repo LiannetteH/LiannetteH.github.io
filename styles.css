@@ -265,7 +265,8 @@ body.dark-mode input[type="submit"] {
   font-weight: bold;
 }
 
-body.dark-mode section h3 {
+body.dark-mode section h3,
+body.dark-mode table caption {
   color: #f9a8d4;
 }
 
@@ -274,6 +275,6 @@ body.dark-mode input[type="submit"]:hover {
 }
 
 body.dark-mode nav a:hover {
-  color: #f9a8d4;
+  color: #f472b6;
 }
 
