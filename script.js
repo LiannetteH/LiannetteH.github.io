@@ -54,4 +54,29 @@ darkModeToggle.addEventListener("change", function() {
   document.body.classList.toggle("dark-mode", darkModeToggle.checked);
 });
 
+// Contact Form interaction
+const submitButton = document.getElementById("submitButton");
+
+const contactForm = document.getElementById("contactForm");
+
+submitButton.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  if (!contactForm.reportValidity()) {
+    return;
+  }
+
+  const senderName = document.getElementById("senderName").value.trim();
+
+  if (senderName === "") {
+    alert("Please enter your name.");
+    return;
+  }
+
+  alter("Thank you, " + senderName + ", your message has been sent!");
+});
+
+
+
+
 
