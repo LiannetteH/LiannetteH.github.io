@@ -54,28 +54,39 @@ darkModeToggle.addEventListener("change", function() {
   document.body.classList.toggle("dark-mode", darkModeToggle.checked);
 });
 
-// Contact Form interaction
+// Contact Form interaction - week 3
+const contactForm = document.querySelector(".contact-form");
 const submitButton = document.getElementById("submitButton");
+const formStatus = document.getElementById("formStatus");
 
-const contactForm = document.getElementById("contactForm");
-
-submitButton.addEventListener("click", function(event) {
+// listen for form submission
+contactForm.addEventListener("submit", function(event) {
+  // prevent page from refreshing and get visitor's name
   event.preventDefault();
-
-  const contactForm = submitButton.closest("form");
-
-  if (!contactForm.reportValidity()) {
-    return;
-  }
 
   const senderName = document.getElementById("senderName").value.trim();
 
-  if (senderName === "") {
-    alert("Please enter your name.");
+  // validate form and disable button during waiting period
+  if (!contactForm.reportValidity() || senderName === "") {
     return;
   }
 
-  alert("Thank you, " + senderName + ", your message has been sent!");
+submitButton.disabled = true;
+
+// display loading message
+formStatus.textContent = "Sending message...";
+formStatus.className = "form-loading";
+
+// delay 2.5 seconds before showing confirmation
+setTimeout(funciton() {
+  "Thank you, " + senderName + "! " +
+  "Your message has been submitted successfully.";
+
+  formStatus.className = "form-success";
+
+  // re-enable submit button
+  submitButton.disabled = false;
+  }, 2500);
 });
 
 // select project section and create a new paragraph
