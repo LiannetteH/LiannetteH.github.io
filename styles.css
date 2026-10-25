@@ -301,3 +301,36 @@ body.dark-mode .project-announcement {
 
 body.dark-mode .about-highlight {
   border-color: #f9a8d4;
+}
+
+.form-loading {
+  color: #a21caf;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.for-success {
+  color: #166534;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #dcfce7;
+  border-radius: 5px;
+}
+
+body.dark-mode .form-loading {
+  color: #f9a8d4;
+}
+
+body.dark-mode .form-success {
+  background-color: #3b2859;
+  color: #f9a8d4;
+}
+
+/* disabled submit button */
+input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+  
