@@ -249,7 +249,7 @@ body.dark-mode a {
 }
 
 body.dark-mode header,
-body.dark-mocde nav a {
+body.dark-mode nav a {
   color: white;
 }
 
@@ -279,7 +279,7 @@ body.dark-mode nav a:hover {
 }
 
 /* Week 3 updates */
-.project-announement {
+.project-announcement {
   background-color: #fce7f3;
   color: #4c1d95;
   border-left: 5px solid #db2777;
@@ -309,7 +309,7 @@ body.dark-mode .about-highlight {
   padding: 10px;
 }
 
-.for-success {
+.form-success {
   color: #166534;
   font-weight: bold;
   padding: 10px;
