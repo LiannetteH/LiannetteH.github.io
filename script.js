@@ -36,7 +36,7 @@ const skills = [
   "C", "HTML", "CSS", "GitHub", "SQL", "Java", "Python", "JavaScript"];
 
 // Select skills list from the About section
-const skillsLIst = document.getElementById("skillsList");
+const skillsList = document.getElementById("skillsList");
 
 // Loop through array and create list items
 skills.forEach(function(skill) {
@@ -78,7 +78,8 @@ formStatus.textContent = "Sending message...";
 formStatus.className = "form-loading";
 
 // delay 2.5 seconds before showing confirmation
-setTimeout(funciton() {
+setTimeout(function() {
+  formStatus.textContent = 
   "Thank you, " + senderName + "! " +
   "Your message has been submitted successfully.";
 
@@ -108,7 +109,7 @@ const projectHeading = document.querySelector("#projects h2");
 projectHeading.textContent = "My Projects";
 
 // select about section and add CSS class
-const aboutSection = document.getElementBIyId("about");
+const aboutSection = document.getElementById("about");
 
 aboutSection.classList.add("about-highlight");
 
