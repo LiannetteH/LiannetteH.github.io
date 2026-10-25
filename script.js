@@ -86,11 +86,11 @@ setTimeout(funciton() {
 
   // re-enable submit button
   submitButton.disabled = false;
-  }, 2500);
+}, 2500);
 });
 
 // select project section and create a new paragraph
-const projectAnnouncement = document.getElementById("projects");
+const projectSection = document.getElementById("projects");
 const projectAnnouncement = document.createElement("p");
 
 projectAnnouncement.textContent = 
@@ -103,9 +103,9 @@ projectAnnouncement.classList.add("project-announcement");
 projectSection.appendChild(projectAnnouncement);
 
 // select project heading and update
-const projectHeading = document.querySelector("projects h2");
+const projectHeading = document.querySelector("#projects h2");
 
-projectsHeading.textContent = "My Projects";
+projectHeading.textContent = "My Projects";
 
 // select about section and add CSS class
 const aboutSection = document.getElementBIyId("about");
