@@ -1,6 +1,6 @@
 /* 
- * SDC 355 Project - Week 1
- * Prompts visitors for their name and displays a custom message.
+ * SDC 355 Project - Week 3
+ * Add a new project announcement, change 2 elements, and add a delay message
  */
 
 // Ask visitor to enter their name.
@@ -77,6 +77,29 @@ submitButton.addEventListener("click", function(event) {
 
   alert("Thank you, " + senderName + ", your message has been sent!");
 });
+
+// select project section and create a new paragraph
+const projectAnnouncement = document.getElementById("projects");
+const projectAnnouncement = document.createElement("p");
+
+projectAnnouncement.textContent = 
+  "Check out my latest project! I am continuing to add new features " + 
+  "as I learn more about using JavaScript, HTML, and CSS.";
+
+// give paragraph a CSS class and insert into project section
+projectAnnouncement.classList.add("project-announcement");
+
+projectSection.appendChild(projectAnnouncement);
+
+// select project heading and update
+const projectHeading = document.querySelector("projects h2");
+
+projectsHeading.textContent = "My Projects";
+
+// select about section and add CSS class
+const aboutSection = document.getElementBIyId("about");
+
+aboutSection.classList.add("about-highlight");
 
 
 
