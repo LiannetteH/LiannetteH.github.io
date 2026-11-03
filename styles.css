@@ -365,12 +365,13 @@ input[type="submit"]:disabled {
 /* Close Button */
 #closeModal {
   background-color: #db2777;
-  color: white;
-  padding: 12px 30px;
+  color: #ffffff;
+  padding: 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: bold;
 }
 
 #closeModal:hover {
@@ -383,12 +384,9 @@ input[type="submit"]:disabled {
 }
 
 /* dark mode modal */
-body.dark-mode .modal-content {
-  background-color: #30204a;
-  color: #f5f0ff;
+body.dark-mode #closeModal {
+  background-color: #db2777;
+  color: #ffffff;
 }
 
-body.dark-mode .modal-content h2 {
-  color: #f9a8d4;
-}
 
