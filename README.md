@@ -26,12 +26,13 @@ What project is used for:
 Technologies and tools used to build this website:
 - HTML5
 - CSS3
+- JavaScript
 
 ## Contributing
 This site is used for my projects, but contributions are welcomed for credit to group projects or submitting any issues.
 
 ## License
-Project is for class assignment
+Project is for class assignments (Web Design and JavaScript)
 
 ## Contact
 email: liahol7600@students.ecpi.edu
