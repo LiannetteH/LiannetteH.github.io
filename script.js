@@ -3,17 +3,17 @@
  * Add a new project announcement, change 2 elements, and add a delay message
  */
 
-// Ask visitor to enter their name.
-let userName = prompt("What is your name?");
+// Select modal and Close button
+const welcomeModal = document.getElementById("welcomeModal");
+const closeModal = document.getElementById("closeModal");
 
-// Update welcome message
-if (userName !== null && userName.trim() !== "") {
-  document.getElementById("welcomeMessage").textContent =
-    "Welcome to my portfolio, " + userName.trim() + "!";
-} else {
-  document.getElementById("welcomeMessage").textContent =
-    "Welcome to my portfolio!";
-}
+closeModal.addEventListener("click", function() {
+  welcomeModal.classList.add("hidden");
+});
+
+// Updated welcome message
+document.getElementById("welcomeMessage").textContent = 
+  "Welcome to my portfolio!";
 
 const projectCount = document.querySelectorAll("#projects tbody tr").length;
 
