@@ -50,7 +50,10 @@ skills.forEach(function(skill) {
 // Dark mode checkbox
 const darkModeToggle = document.getElementById("darkModeToggle");
 
-// Saved preference when page loads
+// load saved preference
+const savedTheme = localStorage.getItem("darkMode");
+
+// Apply saved theme
 if (savedTheme === "enabled") {
   document.body.classList.add("dark-mode");
   darkModeToggle.checked = true;
@@ -59,10 +62,9 @@ if (savedTheme === "enabled") {
   darkModeToggle.checked = false;
 }
 
-// Listen for changes to Dark mode
+// save preference when checkbox changes
 darkModeToggle.addEventListener("change", function() {
-
-  if(darkModeToggle.checked) {
+  if (darkModeToggle.checked) {
     document.body.classList.add("dark-mode");
     localStorage.setItem("darkMode", "enabled");
   } else {
