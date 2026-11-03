@@ -47,11 +47,28 @@ skills.forEach(function(skill) {
   skillsList.appendChild(listItem);
 });
 
-// Dark mode toggle
+// Dark mode checkbox
 const darkModeToggle = document.getElementById("darkModeToggle");
 
+// Saved preference when page loads
+if (savedTheme === "enabled") {
+  document.body.classList.add("dark-mode");
+  darkModeToggle.checked = true;
+} else {
+  document.body.classList.remove("dark-mode");
+  darkModeToggle.checked = false;
+}
+
+// Listen for changes to Dark mode
 darkModeToggle.addEventListener("change", function() {
-  document.body.classList.toggle("dark-mode", darkModeToggle.checked);
+
+  if(darkModeToggle.checked) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", "disabled");
+  }
 });
 
 // Contact Form interaction - week 3
