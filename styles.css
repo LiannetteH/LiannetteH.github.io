@@ -385,8 +385,8 @@ input[type="submit"]:disabled {
 
 /* dark mode modal */
 body.dark-mode #closeModal {
-  background-color: #db2777;
-  color: #ffffff;
+  background-color: #3b2859;
+  color: #f9a8d4;
 }
 
 
