@@ -29,13 +29,14 @@ Technologies and tools used to build this website:
 - HTML5: used for the website's structure and content
 - CSS3: used to style the website (such as pink and purple theme or the dark mode)
 - JavaScript: used to create interactive features and display project information
-- GitHub: used to store project files and track changes.
+- GitHub: used to store project files and track changes
 
 ## Contributing
 This site is used for my projects, but contributions are welcomed for credit to group projects or submitting any issues.
 
 ## License
-Project is for class assignments (Web Design and JavaScript)
+Project is for class assignments (Web Design and JavaScript).
 
 ## Contact
+Name: Liannette Holloway
 email: liahol7600@students.ecpi.edu
