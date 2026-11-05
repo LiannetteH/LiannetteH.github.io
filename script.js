@@ -1,6 +1,7 @@
 /* 
- * SDC 355 Project - Week 3
- * Add a new project announcement, change 2 elements, and add a delay message
+ * SDC 355 Project - Week 5
+ * create custom project objects, store using JSON and sessionStorage,
+ * and generate project table
  */
 
 // Select modal and Close button
@@ -15,7 +16,7 @@ closeModal.addEventListener("click", function() {
 document.getElementById("welcomeMessage").textContent = 
   "Welcome to my portfolio!";
 
-const projectCount = document.querySelectorAll("#projects tbody tr").length;
+const projectCount = projectData.length;
 
 // Select the two Featured Content divs
 const universityResources = document.getElementById("universityResources");
@@ -132,7 +133,89 @@ const aboutSection = document.getElementById("about");
 
 aboutSection.classList.add("about-highlight");
 
+// Project 1: Personal Portfolio
+const project1 = {
+  title: "Personal Portfolio",
+  summary: "A webpage that introduces the developer and displays skills.",
+  image: "https://liannetteh.github.io/images/portfolio.png",
+  link: "https://github.com/LiannetteH/LiannetteH.github.io"
+};
 
+// Project 2: Storefront Website
+const project2 = {
+  title: "Storefront Website",
+  summary: "An online store layout from my SDC 260 midterm that displays products and contact information.",
+  image: "https://liannetteh.github.io/images/storefront.png",
+  link: "https://github.com/LiannetteH/Midterm-Pa"
+};
+
+// Project 3: Blog Website
+const project3 = {
+  title: "Blog Website",
+  summary: "An online blog from my SDC 260 Final that displays blog posts and a contact section.",
+  image: "https://liannetteh.github.io/images/blog.png",
+  link: "https://github.com/LiannetteH/Final-Performance-Assessment"
+};
+
+// Store all three objects in an array
+const projects = [project1, project2, project3];
+
+// Check to see if project info is already stored
+let storedProjects = sessionStorage.getItem("portfolioProjects");
+
+let projectData;
+
+if (storedProjects === null) {
+  // convert array to a string and save it
+  sessionStorage.setItem("portfolioProjects", JSON.stringify(projects));
+  projectData = projects;
+} else {
+  // convert stored string back into an array
+  projectData = JSON.parse(storedProjects);
+}
+
+// select existing project table body
+const projectTableBody = document.getElementById("projectTableBodu");
+
+// Clear any existing rows
+projectTableBody.innerHTML = "";
+
+// Loop through the project array
+projectData.forEach(function(project) {
+  // create a new table row
+  const row = document.createElement("tr");
+
+  // create project title cell
+  const titleCell = document.createElement("td");
+  titleCell.textContent = project.title;
+
+  // create summary cell
+  const summaryCell = document.createElement("td");
+  summaryCell.textContent = project.summary
+
+  // create image cell
+  const imageCell = document.createElement("td");
+
+  // create a clickable link
+  const projectImage = document.createElement("img");
+  projectImage.src = project.image;
+  projectImage.alt = project.title + " Screenshot";
+  projectImage.classList.add("project-image");
+
+  // add image to the link
+  projectLink.appendChild(projectImage);
+
+  // add link to image cell
+  imageCell.appendChild(projectLink);
+
+  // add cells to the table row
+  row.appendChild(titleCell);
+  row.appendChild(summaryCell);
+  row.appendChild(imageCell);
+
+  // add completed row to the table
+  projectTableBody.appendChild(row);
+});
 
 
 
