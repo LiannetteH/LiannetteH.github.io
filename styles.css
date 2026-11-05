@@ -358,7 +358,7 @@ input[type="submit"]:disabled {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);  
 }
 
-.modal-conent h2 {
+.modal-content h2 {
   color: #4c1d95;
 }
 
