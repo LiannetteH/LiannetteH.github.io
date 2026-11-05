@@ -16,22 +16,6 @@ closeModal.addEventListener("click", function() {
 document.getElementById("welcomeMessage").textContent = 
   "Welcome to my portfolio!";
 
-const projectCount = projectData.length;
-
-// Select the two Featured Content divs
-const universityResources = document.getElementById("universityResources");
-
-const personalProjects = document.getElementById("personalProjects");
-
-// Determine which resources should appear
-if (projectCount < 3) {
-  universityResources.hidden = false;
-  personalProjects.hidden = false;
-} else {
-    universityResources.hidden = true;
-    personalProjects.hidden = false;
-}
-
 // Array for technical skills
 const skills = [
   "C", "HTML", "CSS", "GitHub", "SQL", "Java", "Python", "JavaScript"];
@@ -174,8 +158,25 @@ if (storedProjects === null) {
   projectData = JSON.parse(storedProjects);
 }
 
+// count projects after loading the project data
+const projectCount = projectData.length;
+
+// Select the two Featured Content divs
+const universityResources = document.getElementById("universityResources");
+
+const personalProjects = document.getElementById("personalProjects");
+
+// Determine which resources should appear
+if (projectCount < 3) {
+  universityResources.hidden = false;
+  personalProjects.hidden = false;
+} else {
+    universityResources.hidden = true;
+    personalProjects.hidden = false;
+}
+
 // select existing project table body
-const projectTableBody = document.getElementById("projectTableBodu");
+const projectTableBody = document.getElementById("projectTableBody");
 
 // Clear any existing rows
 projectTableBody.innerHTML = "";
@@ -196,7 +197,13 @@ projectData.forEach(function(project) {
   // create image cell
   const imageCell = document.createElement("td");
 
-  // create a clickable link
+  // crete clickable link
+  const projectLink = document.createElement("a");
+  projectLink.href = project.link;
+  projectLink.target = "_blank";
+  projectLink.rel = "noopener noreferrer";
+  
+  // create project image
   const projectImage = document.createElement("img");
   projectImage.src = project.image;
   projectImage.alt = project.title + " Screenshot";
